@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุขสันต์วันครบรอบ 1 เดือนนะคนดี 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe6ea 0%, #ffc3a0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #4a4a4a;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(255, 107, 129, 0.2);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            border: 2px solid #fff;
+        }
+
+        h2 {
+            color: #ff4757;
+            font-family: 'Mali', cursive;
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.4;
+        }
+
+        p.sub-text {
+            font-size: 0.95rem;
+            color: #777;
+            margin-bottom: 1.5rem;
+        }
+
+        /* หน้ากรอกรหัสผ่าน */
+        .passcode-box {
+            margin-top: 1rem;
+        }
+
+        input[type="password"] {
+            width: 80%;
+            padding: 12px 15px;
+            border: 2px solid #ffb3c1;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            text-align: center;
+            outline: none;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        input[type="password"]:focus {
+            border-color: #ff4757;
+            box-shadow: 0 0 10px rgba(255, 71, 87, 0.2);
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff6b81, #ff4757);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.4);
+        }
+
+        .error-message {
+            color: #ff4757;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            display: none;
+            animation: shake 0.3s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* หน้าขูดรูปภาพ */
+        #scratch-section {
+            display: none;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .canvas-container {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin: 20px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border: 4px solid #fff;
+        }
+
+        #secret-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            user-select: none;
+        }
+
+        #scratch-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            touch-action: none;
+        }
+
+        /* ข้อความจากใจ */
+        .love-letter {
+            background-color: #fff0f3;
+            border-radius: 16px;
+            padding: 18px;
+            margin-top: 20px;
+            border: 1px dashed #ffb3c1;
+            text-align: left;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.02);
+            font-family: 'Mali', cursive;
+        }
+
+        .love-letter p {
+            font-family: 'Mali', cursive;
+            margin-bottom: 10px;
+            text-indent: 15px;
+        }
+
+        .love-letter p:last-child {
+            margin-bottom: 0;
+        }
+
+        .instruction-tag {
+            background-color: #ffe6ea;
+            color: #ff4757;
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-section">
+            <h2>🔒 ความลับของเราสองคน</h2>
+            <p class="sub-text">ใส่วันครบรอบของเราเพื่อเปิดดูนะคนดี 💕<br><small>(ตัวอย่าง: 010267)</small></p>
+            
+            <div class="passcode-box">
+                <input type="password" id="passcode" placeholder="ใส่วันครบรอบที่นี่..." maxlength="10">
+                <br>
+                <button onclick="checkPasscode()">ปลดล็อกหัวใจ ❤️</button>
+            </div>
+            
+            <div id="error-msg" class="error-message">รหัสผ่านไม่ถูกต้อง ลองใส่ใหม่อีกทีน้าอ้วน 🥺</div>
+        </div>
+
+        <div id="scratch-section">
+            <h2>✨ Happy 1st Month Anniversary ✨</h2>
+            <div class="instruction-tag">🎨 ใช้นิ้วหรือเมาส์ถู/ระบายเพื่อเปิดรูปของเราน้า</div>
+
+            <div class="canvas-container">
+                <img id="secret-image" src="⁠my-photo.jpg⁠" alt="รูปคู่ของเรา">
+                <canvas id="scratch-canvas" width="280" height="280"></canvas>
+            </div>
+
+            <div class="love-letter">
+                <p>สุขสันต์วันครบรอบ1เดือนที่เป็นแฟนกันนะที่รัก</p>
+                <p>เค้ารักอ้วนน๊าาาาาาารักมากๆๆเยยยยย😚 ขอโทษที่ทำให้เสียใจอยู่บ่อยๆๆ แต่อยากให้อยู่ไปตลอดเลยนะไม่อยากให้หายไปไหนเลย เค้าอยากมีเธอทุกวัน ถึงบางทีอาจจะไม่เเสดงว่ารักแต่เค้ารักอ้วนมากนะอย่าคิดว่าเค้าไม่รักด้วย เเต่เค้าก็ทำอ้วนนอยอยู่บ่อยๆ กลัวอ้วนไม่รักเค้าเหมือนเดิมจัง🥹</p>
+                <p>เเต่ถึงยังใงก็อย่าพึ่งเบื่อกันนะ อยู่กันไปนานๆๆนะอ้วน🤍</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 🔑 1. กำหนดรหัสผ่านวันครบรอบตรงนี้ (แก้ไขตัวเลขในอัญประกาศ)
+        const CORRECT_PASSCODE = "230669"; 
+
+        function checkPasscode() {
+            const input = document.getElementById('passcode').value.trim();
+            const errorMsg = document.getElementById('error-msg');
+            
+            if (input === CORRECT_PASSCODE) {
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('scratch-section').style.display = 'block';
+                initScratchCard(); // เริ่มทำงานระบบขูด/ระบายสี
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        }
+
+        // 🎨 2. ระบบขูดภาพ/ระบายสีบน Canvas
+        function initScratchCard() {
+            const canvas = document.getElementById('scratch-canvas');
+            const ctx = canvas.getContext('2d');
+
+            // ใส่สีทับรูปภาพไว้ก่อนขูด (สีชมพูพาสเทล)
+            ctx.fillStyle = '#ffb3c1';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // ใส่ข้อความและไอคอนบนแผ่นขูด
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 18px Kanit, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('ระบายสีตรงนี้สิอ้วน 💖', canvas.width / 2, canvas.height / 2);
+
+            let isDrawing = false;
+
+            function scratch(e) {
+                if (!isDrawing) return;
+                
+                const rect = canvas.getBoundingClientRect();
+                // รองรับทั้งเมาส์และสัมผัสหน้าจอมือถือ
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
+
+                ctx.globalCompositeOperation = 'destination-out'; // โหมดทำให้บริเวณที่ลากกลายเป็นช่องโปร่งใส
+                ctx.beginPath();
+                ctx.arc(x, y, 22, 0, Math.PI * 2); // ขนาดหัวแปรงระบาย
+                ctx.fill();
+            }
+
+            // Events สำหรับเมาส์ (คอมพิวเตอร์)
+            canvas.addEventListener('mousedown', (e) => { isDrawing = true; scratch(e); });
+            canvas.addEventListener('mousemove', scratch);
+            canvas.addEventListener('mouseup', () => isDrawing = false);
+
+            // Events สำหรับ Touch (โทรศัพท์มือถือ/แท็บเล็ต)
+            canvas.addEventListener('touchstart', (e) => { isDrawing = true; scratch(e); });
+            canvas.addEventListener('touchmove', scratch);
+            canvas.addEventListener('touchend', () => isDrawing = false);
+        }
+    </script>
+</body>
+</html>
